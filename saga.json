@@ -1,0 +1,10 @@
+//JSON file with book information; will try pulling from API if time permits
+{
+    "comics": [{
+        "book" : "Volume 1",
+        "summary" : "SAGA is the sweeping tale of one young family fighting to find their place in the worlds. When two soldiers from opposite sides of a never-ending galactic war fall in love, they risk everything to bring a fragile new life into a dangerous old universe.",
+        "release" : "October 2012",
+        "cover" : "vol1.jpg",
+        "singles" : [issue1.jpg, issue2.jpg, issue3.jpg, issue4.jpg, issue5.jpg, issue6.jpg]
+    }]
+}
