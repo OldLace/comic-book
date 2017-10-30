@@ -1,11 +1,12 @@
 //declare dependencies
 const express = require('express');
+let partials = require('express-partials')
 const path = require('path');
 
 //initialize express
 const app = express();
 
-// const saga-routes = require('./routes/saga-routes')
+const sagaRoutes = require('./routes/saga-routes.js')
 
 
 
@@ -27,7 +28,13 @@ app.set('view engine', 'ejs')
 
 //Index
 app.get('/', function(req, res) {
-  res.render('saga-index.ejs');
+  res.render('./saga-index');
+});
+
+app.get('/saga-volume/:volume?', function(req, res) {
+  let volume = req.params.volume
+  res.send("Volume # " + volume)
+  // res.render('./saga-volume.ejs');
 });
 
 
