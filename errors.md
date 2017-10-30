@@ -6,5 +6,5 @@ SyntaxError: /Users/old_lace/Documents/GitHub/comic-books/saga.json: Unexpected 
 
 
     Error: Route.get() requires a callback function but got a [object Undefined]
-        Googling it brought me: https://stackoverflow.com/questions/21124909/express-routes-get-requires-callback-functions-but-got-a-object-object
+        Googling it brought me to: https://stackoverflow.com/questions/21124909/express-routes-get-requires-callback-functions-but-got-a-object-object
         

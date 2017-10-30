@@ -8,7 +8,8 @@ const sagaController = require('../controllers/saga-controller')
 // sagaRoutes.post('/',sagaController.create)
 
 
-let comicInfo = sagaData.comics
+// not needed in this file
+// let comicInfo = sagaData.comics
 
 
 
