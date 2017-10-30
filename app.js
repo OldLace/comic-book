@@ -6,7 +6,7 @@ const path = require('path');
 //initialize express
 const app = express();
 
-const sagaRoutes = require('./routes/saga-routes.js')
+const sagaRoutes = require('./routes/saga-routes')
 
 
 
@@ -34,7 +34,7 @@ app.get('/', function(req, res) {
 app.get('/saga-volume/:volume?', function(req, res) {
   let volume = req.params.volume
   res.send("Volume # " + volume)
-  // res.render('./saga-volume.ejs');
+  res.render('./saga-volume.ejs');
 });
 
 
