@@ -3,10 +3,15 @@ const express = require('express');
 let partials = require('express-partials');
 const path = require('path');
 
+const sagaRoutes = require('./routes/saga-routes');
+const sagaData = require('./saga.json');
+
+
 //initialize express
 const app = express();
 
-const sagaRoutes = require('./routes/saga-routes');
+
+
 
 
 
@@ -25,8 +30,6 @@ app.set('views',path.join(__dirname,'views'))
 //EJS setup
 app.set('view engine', 'ejs')
 
-
-
 //Index
 app.get('/', function(req, res) {
   res.render('./saga-index');
@@ -38,13 +41,9 @@ app.get('/saga-volume/:volume?', function(req, res) {
   res.render('./saga-volume');
 });
 
-
-
-
-//404 Error
-app.get('*', function(req, res) {
-    res.send("Error!! Page not found");
-    res.render('./404');
+app.use('*', (req, res) => {
+  res.status(404).send('Page Not Found');
+  // res.render('./404')
 });
 
 //port configuration
