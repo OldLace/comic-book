@@ -1,8 +1,4 @@
-<% include ./partials/boilerplate.ejs %>
-<p>Testing from boilerplate partial</p>
-<% include ./partials/footer.ejs %>
-
-<% = {
+{
     "comics": [{
         "book" : "Volume 1",
         "summary" : "SAGA is the sweeping tale of one young family fighting to find their place in the worlds. When two soldiers from opposite sides of a never-ending galactic war fall in love, they risk everything to bring a fragile new life into a dangerous old universe.",
@@ -17,9 +13,4 @@
      "cover" : "vol2.jpg",
      "singles" : ["saga_007_cover.jpg", "saga_009_cover.jpg", "saga_010_cover.jpg", "saga_011_cover.jpg", "saga_012_cover.jpg"]
     }]
-} = %>
-
-<% for (let i = 0; i < comics.length; i++) { %>
-    <img src="./images/covers/<%= comics.cover %>"
-<% } %>
-
+}

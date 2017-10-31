@@ -5,10 +5,11 @@ const path = require('path');
 
 const sagaRoutes = require('./routes/saga-routes');
 const sagaData = require('./saga.json');
-
+let api = require('marvel-api');
 
 //initialize express
 const app = express();
+
 
 
 
@@ -21,11 +22,11 @@ const app = express();
 
 
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 
 //Views setup
-app.set('views',path.join(__dirname,'views'))
+app.set('views',path.join(__dirname,'views'));
 
 //EJS setup
 app.set('view engine', 'ejs')
@@ -35,6 +36,10 @@ app.get('/', function(req, res) {
   res.render('./saga-index');
 });
 
+app.get('/', function(req, res) {
+  res.render('./ratings');
+});
+
 app.get('/saga-volume/:volume?', function(req, res) {
   let volume = req.params.volume
   res.send("Volume # " + volume)
@@ -42,7 +47,7 @@ app.get('/saga-volume/:volume?', function(req, res) {
 });
 
 app.use('*', (req, res) => {
-  res.status(404).send('Page Not Found');
+  res.status(404).send('Page Not Found!!!!!');
   // res.render('./404')
 });
 
@@ -50,3 +55,13 @@ app.use('*', (req, res) => {
 app.listen(3000, function() {
     console.log("Server up and running on port 3000");
 });
+
+
+
+
+
+
+// marvel.creators.findByName('Goran', 'Sudzuka')
+// .then(console.log)
+// .fail(console.error)
+// .done();
