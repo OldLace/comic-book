@@ -36,8 +36,9 @@ app.get('/', function(req, res) {
   res.render('./saga-index');
 });
 
-app.get('/', function(req, res) {
-  res.render('./ratings');
+app.get('/ratings', function(req, res) {
+  // res.send("Send Test");
+  res.render('ratings');
 });
 
 app.get('/saga-volume/:volume?', function(req, res) {
