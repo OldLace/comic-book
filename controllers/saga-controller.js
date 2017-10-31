@@ -1,14 +1,20 @@
 const Review = require('../models/Reviews');
-
+const fetch = require('node-fetch')
 const reviewsController = {};
 
 reviewsController.index = (req, res) => {
   Review.findAll()
   .then(ratings => {
-    res.render('/saga/ratings', {
+    // res.render('/saga/ratings', {
       ratings: review
-});
-  });
+    });
+
+
+  fetch("https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json")
+  .then(response => response.json())
+  .then(function(book){
+      res.render('saga-index', { book:book})
+    });
 }
 
 reviewsController.show = (req, res) => {
@@ -20,7 +26,10 @@ reviewsController.show = (req, res) => {
   });
 };
 
-
+reviewsController.getVolume = (req,res) => {
+  console.log(req.params.id)
+  return res.json({success:true})
+}
 // reviewsController.create = (req, res) => {
 //   Review.create({
 //     name: req.body.name,

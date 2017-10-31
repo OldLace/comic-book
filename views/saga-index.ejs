@@ -14,9 +14,14 @@
 </form>
 </br>
 <a href="/saga-index">Go Back</a>
-
+<div>
+    <%= JSON.stringify(book) %>
+</div>
 <script>
 
+fetch("/saga/volume/1").then(function(res){
+    console.log(res)
+})
 
 // fetch("https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json");
 // .then(function(res){
@@ -27,21 +32,21 @@
 // };
 
 
-fetch('https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json')
-.then(function (response) {
-  return response.json()
-})
-.then(function (json) {
-  console.log(json)
-  console.log(results)
-  return json
-})
+// fetch('https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json')
+// .then(function (response) {
+//   return response.json()
+// })
+// .then(function (json) {
+//   console.log(json)
+//   console.log(results)
+//   return json
+// })
 
-fetch("https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697").then(r => r.json())
-  .then(data => console.log(data))
-  .catch(e => console.log("Booo"))
+// fetch("https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697").then(r => r.json())
+//   .then(data => console.log(data))
+//   .catch(e => console.log("Booo"))
 
-    </script>
+//     </script>
 
 
 

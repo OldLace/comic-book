@@ -17,7 +17,7 @@ const app = express();
 
 
 app.use(express.static('public'));
-
+app.use('/saga', sagaRoutes);
 
 //Views setup
 app.set('views',path.join(__dirname,'views'));
@@ -26,9 +26,9 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'ejs')
 
 //Index
-app.get('/', function(req, res) {
-  res.render('./saga-index');
-});
+// app.get('/', function(req, res) {
+//   res.render('./saga-index');
+// });
 
 app.get('/ratings', function(req, res) {
   // res.send("Send Test");

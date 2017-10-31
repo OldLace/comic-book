@@ -15,7 +15,7 @@ const sagaController = require('../controllers/saga-controller');
 sagaRouter.get('/', sagaController.index);
 sagaRouter.get('/:id', sagaController.show);
 // sagaRoutes.post('/',sagaController.create)
-
+sagaRouter.get('/volume/:id', sagaController.getVolume)
 
 
 // not needed in this file
