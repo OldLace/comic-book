@@ -1,18 +1,19 @@
 const express = require('express');
 
-const sagaRoutes = express.Router()
-const sagaData = require('../saga.json')
-const sagaController = require('../controllers/saga-controller')
+const sagaRouter = express.Router();
+const sagaData = require('../saga.json');
+const sagaController = require('../controllers/saga-controller');
 
 // const sagaData = require('./saga.json');
 
-let comicInfo = sagaData.comics;
-let summary = comicInfo.summary;
-let volumeCovers = comicInfo.cover;
+// let comicInfo = sagaData.comics;
+// let summary = comicInfo.summary;
+// let volumeCovers = comicInfo.cover;
 
 
 
-// sagaRoutes.get('/' ,sagaController.index)
+sagaRouter.get('/' ,sagaController.index);
+sagaRouter.get('/:id', sagaController.show);
 // sagaRoutes.post('/',sagaController.create)
 
 
@@ -28,7 +29,7 @@ let volumeCovers = comicInfo.cover;
 // }
 
 
-module.exports = sagaRoutes
+module.exports = sagaRouter;
 
 
 // http://www.comicvine.com/api/search/?api_key=your-key&query=your-character&format=json

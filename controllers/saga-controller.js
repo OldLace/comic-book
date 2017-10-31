@@ -1,4 +1,4 @@
-const Review = require('../models/reviews');
+const Review = require('../models/Reviews');
 
 const reviewsController = {};
 
