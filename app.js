@@ -11,15 +11,9 @@ let api = require('marvel-api');
 const app = express();
 
 
-
-
-
-
-
 // app.use(logger('dev'))
 // app.use(bodyParser.json())
 // app.use(bodyParser.urlencoded({extended:false}))
-
 
 
 app.use(express.static('public'));
@@ -56,10 +50,6 @@ app.use('*', (req, res) => {
 app.listen(3000, function() {
     console.log("Server up and running on port 3000");
 });
-
-
-
-
 
 
 // marvel.creators.findByName('Goran', 'Sudzuka')

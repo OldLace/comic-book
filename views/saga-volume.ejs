@@ -1,25 +1,6 @@
 <% include ./partials/boilerplate.ejs %>
-<p>Testing from boilerplate partial</p>
+<p>Testing from volume partial</p>
 <% include ./partials/footer.ejs %>
 
-<% = {
-    "comics": [{
-        "book" : "Volume 1",
-        "summary" : "SAGA is the sweeping tale of one young family fighting to find their place in the worlds. When two soldiers from opposite sides of a never-ending galactic war fall in love, they risk everything to bring a fragile new life into a dangerous old universe.",
-        "release" : "October 2012",
-        "cover" : "vol1.jpg",
-        "singles" : ["Saga_01-1.png", "saga_002_cover.jpg", "saga_003_cover.jpg", "saga_004_cover.jpg", "saga_005_cover.jpg", "saga_006_cover.jpg"]
-    },
-    {
-     "book" : "Volume 2",
-     "summary" : "Thanks to her star-crossed parents Marko and Alana, newborn baby Hazel has already survived lethal assassins, rampaging armies, and alien monstrosities, but in the cold vastness of outer space, the little girl encounters her family's greatest challenge yet: the grandparents.",
-     "release" : "June 2013",
-     "cover" : "vol2.jpg",
-     "singles" : ["saga_007_cover.jpg", "saga_009_cover.jpg", "saga_010_cover.jpg", "saga_011_cover.jpg", "saga_012_cover.jpg"]
-    }]
-} = %>
 
-<% for (let i = 0; i < comics.length; i++) { %>
-    <img src="./images/covers/<%= comics.cover %>"
-<% } %>
 

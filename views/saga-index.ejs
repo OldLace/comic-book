@@ -1,9 +1,47 @@
 <% include ./partials/boilerplate %>
 
 <h1>Testing from Index Page</h1>
-<p><a href="./saga-volume/1">Volume 1</a></p>
+<!-- <p><a href="./saga-volume/1">Volume 1</a></p> -->
 
- <img src="./images/covers/vol1.jpg">
+ <!-- <img src="./images/covers/vol1.jpg"> -->
+
+ <form action="/" method="POST">
+    <input type="text" name="name" placeholder="name" />
+    <input type="text" name="location" placeholder="location" />
+  <input type="text" name="comment" placeholder="comment" />
+
+  <input type="submit" value="Add it!" />
+</form>
+</br>
+<a href="/saga-index">Go Back</a>
+
+<script>
+
+
+// fetch("https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json");
+// .then(function(res){
+//         console.log(results.characters.name[1])
+//         console.log(Data.results.characters)
+//         console.log(CharacterData)
+//         return CharacterData;
+// };
+
+
+fetch('https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json')
+.then(function (response) {
+  return response.json()
+})
+.then(function (json) {
+  console.log(json)
+  console.log(results)
+  return json
+})
+
+fetch("https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697").then(r => r.json())
+  .then(data => console.log(data))
+  .catch(e => console.log("Booo"))
+
+    </script>
 
 
 
