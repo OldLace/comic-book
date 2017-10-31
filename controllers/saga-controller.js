@@ -33,3 +33,4 @@ reviewsController.show = (req, res) => {
 //   });
 // ));
 
+module.exports = reviewsController ;

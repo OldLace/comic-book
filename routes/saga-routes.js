@@ -12,7 +12,7 @@ const sagaController = require('../controllers/saga-controller');
 
 
 
-sagaRouter.get('/' ,sagaController.index);
+sagaRouter.get('/', sagaController.index);
 sagaRouter.get('/:id', sagaController.show);
 // sagaRoutes.post('/',sagaController.create)
 
