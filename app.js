@@ -51,7 +51,8 @@ app.listen(3000, function() {
     console.log("Server up and running on port 3000");
 });
 
-
+// $( document ).ready(function() {  $("book.results.description")
+// })
 // marvel.creators.findByName('Goran', 'Sudzuka')
 // .then(console.log)
 // .fail(console.error)
