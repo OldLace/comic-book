@@ -50,7 +50,8 @@ app.get('/info/', function(req, res) {
 // });
 
 app.use('*', (req, res) => {
-  res.status(404).send('Page Not Found!!!!!');
+  res.render('./fourohfour')
+  // res.status(404).send('Page Not Found!!!!!');
   // res.render('./404')
 });
 

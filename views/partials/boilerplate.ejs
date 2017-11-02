@@ -25,7 +25,33 @@ text-decoration: none;
 margin: 5px 2px;
 border-radius: 50%;
 }
+ /* nav bar */
+    ul {
+        list-style-type: none;
+       }
+    li a {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+    }
+    ul li {
+        display: inline-block;
+        padding: 12px;
+    }
 
+li a:hover {
+    background-color: orange;
+    overflow: hidden;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: whitesmoke;
+  text-align: center;
+}
     </style>
     <!-- <script type='text/javascript' src='../db/config.js'></script> -->
 
@@ -36,7 +62,7 @@ border-radius: 50%;
     <nav>
         <ul>
                 <li><a href="/saga">Home</a></li>
-                <li><a href="/volume">The Books</a></li>
+                <li><a href="/volume">Books</a></li>
                 <li><a href="/reviews">Reviews</a></li>
                 <li><a href="/info">About</a></li>
               </ul>
