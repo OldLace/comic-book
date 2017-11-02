@@ -18,3 +18,4 @@ I also attempted to use the Goodreads API, which requires registration in order 
 I meant to test out the API using the keys unencrypted and hide them later. Unfortunately I committed to GitHub with both keys
 visible.
 
+I messed up when coding and had to revert to a previous Git commit. Once I reverted, I realized that I had to go back yet another commit. In the end, I was able to continue, but it took soem fandangling in Git.
