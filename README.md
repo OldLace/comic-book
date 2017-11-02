@@ -1,7 +1,7 @@
 # comic-book
 
 My app was to be a reference guide for fans of the comic book, Saga. Having started in 2012, it is a long running book with
-an ongoing plot and thus a reference guide woudld be quite helpful. 
+an ongoing plot and thus a reference guide would be quite helpful. 
 
 User Story:
 Mike is a fan of Saga. With a new issue coming soon after a six month hiatus, Mike wishes to refresh his memory via images and
