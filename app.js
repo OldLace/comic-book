@@ -5,15 +5,16 @@ const path = require('path');
 
 const sagaRoutes = require('./routes/saga-routes');
 const sagaData = require('./saga.json');
-let api = require('marvel-api');
+const bodyParser = require('body-parser');
+// let api = require('marvel-api');
 
 //initialize express
 const app = express();
 
 
 // app.use(logger('dev'))
-// app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 
 
 app.use(express.static('public'));
@@ -30,20 +31,31 @@ app.set('view engine', 'ejs')
 //   res.render('./saga-index');
 // });
 
-app.get('/ratings', function(req, res) {
+app.get('/reviews', function(req, res) {
   // res.send("Send Test");
-  res.render('ratings');
+  res.render('./saga-reviews');
 });
 
-app.get('/saga-volume/:volume?', function(req, res) {
-  let volume = req.params.volume
-  res.send("Volume # " + volume)
-  res.render('./saga-volume');
+app.get('/books/', function(req, res) {
+  res.render('./saga-books');
 });
+
+app.get('/info/', function(req, res) {
+  res.render('./saga-info');
+});
+// app.get('/saga-volume/:volume?', function(req, res) {
+//   let volume = req.params.volume
+//   res.send("Volume # " + volume)
+//   res.render('saga/saga-volume');
+// });
 
 app.use('*', (req, res) => {
   res.status(404).send('Page Not Found!!!!!');
   // res.render('./404')
+});
+
+app.get('/', function(req, res) {
+  res.render('/saga-index');
 });
 
 //port configuration

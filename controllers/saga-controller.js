@@ -21,7 +21,7 @@ reviewsController.index = (req, res) => {
 fetch("https://comicvine.gamespot.com/api/person/4040-40448/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json")
 .then(response => response.json())
 .then(function(author){
-    res.render('saga-index', { author:author})
+    res.render('/', { author:author})
   });
 
 
@@ -29,7 +29,9 @@ fetch("https://comicvine.gamespot.com/api/person/4040-40448/?api_key=ea3f9509452
 
 //https://comicvine.gamespot.com/api/person/4040-40448/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json
 
-
+// sagaRouter.get('/', function(req, res, next) {
+//   res.render('saga-index',);
+// });
 
 
 reviewsController.show = (req, res) => {

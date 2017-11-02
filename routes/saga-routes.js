@@ -12,26 +12,18 @@ const sagaController = require('../controllers/saga-controller');
 
 
 
+sagaRouter.get('/add', (req, res) => {
+  res.render('saga/ratings', {});
+})
+
 sagaRouter.get('/', sagaController.index);
 sagaRouter.get('/:id', sagaController.show);
 // sagaRoutes.post('/',sagaController.create)
 sagaRouter.get('/volume/:id', sagaController.getVolume)
 
+// sagaRouter.use('/', saga-volume);
 
-// not needed in this file
-// let comicInfo = sagaData.comics
-
-
-
-
-// sagaRoutes.get('/add', (req, res)=>{
-//  res.render('[')
-// }
+// sagaRouter.get('/404', sagaController.index);
 
 
 module.exports = sagaRouter;
-
-
-// http://www.comicvine.com/api/search/?api_key=your-key&query=your-character&format=json
-
-// http://www.comicvine.com/api/
