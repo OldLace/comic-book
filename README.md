@@ -6,7 +6,7 @@ an ongoing plot and thus a reference guide woudld be quite helpful.
 User Story:
 Mike is a fan of Saga. With a new issue coming soon after a six month hiatus, Mike wishes to refresh his memory via images and
 small blurbs of key plot points. He clicks on the image of a previous volume and sees the covers of the individual issues 
-contained within said volume.
+contained within said volume. He would also like to add his own personal thoughts via the reviews feature.
 
 Unfortunately during development, I encountered...
 
