@@ -18,11 +18,6 @@ reviewsController.index = (req, res) => {
     });
 }
 
-fetch("https://comicvine.gamespot.com/api/person/4040-40448/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json")
-.then(response => response.json())
-.then(function(author){
-    res.render('/', { author:author})
-  });
 
 
 //https://comicvine.gamespot.com/api/volume/4050-46568/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json
@@ -46,6 +41,12 @@ reviewsController.show = (req, res) => {
 reviewsController.getVolume = (req,res) => {
   console.log(req.params.id)
   return res.json({success:true})
+
+  fetch("https://comicvine.gamespot.com/api/person/4040-40448/?api_key=ea3f9509452cf8d0f7c2625a519a7ff496f98697&format=json")
+  .then(response => response.json())
+  .then(function(author){
+      res.render('/', { author:author})
+    });
 }
 // reviewsController.create = (req, res) => {
 //   Review.create({

@@ -20,8 +20,17 @@ Review.create = (review, userId) => {
   (name, review, stars)
   VALUES ($1, $2, $3)
   RETURNING *
- `, [review.name, review.comment, review.stars])
+ `, [ratings.name, ratings.location, ratings.comment])
 };
 
+Review.update = (name, id) => {
+  return db.one(`
+  UPDATE ratings SET
+  name = $1,
+  location = $2,
+  comment = $3
+  RETURNING *
+  `, [ratings.name, ratings.location, ratings.comment]);
+}
 
 module.exports = Review;

@@ -1,10 +1,11 @@
 <% include ./partials/boilerplate %>
 
-<h1>Testing from Ratings Page</h1>
+<h1>Reviews</h1>
 
 <form method='POST' action='/saga'>
   <input name='name' type='text' placeholder='Name' />
-  <textarea name='comment' size=200 type='text' placeholder='comment' />
+  <input name='location' type='text' placeholder='Location' />
+  <input name='review' size=60 type='text' placeholder='Review' />
   <button method="POST" action="/saga" type="submit" class="submit">Submit</button>
 </form>
 
