@@ -1,20 +1,18 @@
+<!-- API Used: https://comicvine.gamespot.com/api/documentation -->
 <% include ./partials/boilerplate %>
 
-<h1>Quite possibly the greatest comic book in the world...</h1>
-<!-- <p><a href="./saga-volume/1">Volume 1</a></p> -->
-
- <!-- <img src="./images/covers/vol1.jpg"> -->
-
-
+<div>
+    <%= book.results.character_credits %>
+  <img src="<%= book.results.image.medium_url %>" />
+</div>
 
 <div>
+  <%- book.results.deck %>
+</div>
+<div>
+  <%- book.results.description %>
 
-  <img src="<%= book.results.image.medium_url %>" />
-
-    </div>
-
-
-
+</div>
 
 
 
